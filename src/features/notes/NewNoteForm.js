@@ -19,6 +19,8 @@ const NewNoteForm = ({ users }) => {
     const [text, setText] = useState('')
     const [userId, setUserId] = useState(users[0].id)
 
+    // console.log(userId)
+
     useEffect(() => {
         if (isSuccess) {
             setTitle('')
@@ -40,6 +42,8 @@ const NewNoteForm = ({ users }) => {
             await addNewNote({ user: userId, title, text })
         }
     }
+
+    console.log(userId)
 
     const options = users.map(user => {
         return (
