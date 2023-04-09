@@ -38,12 +38,11 @@ const NewNoteForm = ({ users }) => {
 
     const onSaveNoteClicked = async (e) => {
         e.preventDefault()
+        console.log("Hello World")
         if (canSave) {
             await addNewNote({ user: userId, title, text })
         }
     }
-
-    console.log(userId)
 
     const options = users.map(user => {
         return (
