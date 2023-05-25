@@ -31,7 +31,7 @@ const Login = () => {
 
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
       const { accessToken } = await login({ username, password }).unwrap()
       navigate('/dash')
