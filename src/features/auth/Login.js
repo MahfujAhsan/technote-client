@@ -34,10 +34,10 @@ const Login = () => {
     e.preventDefault()
     try {
       const { accessToken } = await login({ username, password }).unwrap()
+      navigate('/dash')
       dispatch(setCredentials({ accessToken }))
       setUsername('')
       setPassword('')
-      navigate('/dash')
     } catch (err) {
       if (!err.status) {
         setErrMsg('No Server Response');
