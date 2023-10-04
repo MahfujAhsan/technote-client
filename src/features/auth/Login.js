@@ -34,8 +34,8 @@ const Login = () => {
     e.preventDefault();
     try {
       const { accessToken } = await login({ username, password }).unwrap()
-      navigate('/dash')
       dispatch(setCredentials({ accessToken }))
+      navigate('/dash')
       setUsername('')
       setPassword('')
     } catch (err) {
@@ -58,7 +58,7 @@ const Login = () => {
 
   const errClass = errMsg ? "errmsg" : "offscreen"
 
-  if (isLoading) return <PulseLoader />
+  if (isLoading) return <p>PLease wait</p>
 
   const content = (
     <section className="public">
