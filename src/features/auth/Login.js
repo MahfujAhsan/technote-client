@@ -6,7 +6,11 @@ import { setCredentials } from './authSlice'
 import { useLoginMutation } from './authApiSlice'
 
 import usePersist from '../../hooks/usePersist'
-import { PulseLoader } from "react-spinners"
+
+import {
+    faHome
+} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Login = () => {
   const userRef = useRef()
@@ -58,12 +62,12 @@ const Login = () => {
 
   const errClass = errMsg ? "errmsg" : "offscreen"
 
-  if (isLoading) return <p>PLease wait</p>
+  if (isLoading) return <p className='loading__message'>PLease wait...</p>
 
   const content = (
     <section className="public">
       <header>
-        <h1>Employee Login</h1>
+        <h1>Employee Login </h1>
       </header>
       <main className="login">
         <p ref={errRef} className={errClass} aria-live="assertive">{errMsg}</p>
@@ -104,9 +108,19 @@ const Login = () => {
             Trust This Device
           </label>
         </form>
+        <div className='access'>
+          <div className='admin__access'>
+            <p><span>AdminUsername: </span> Mahfuj</p>
+            <p><span>AdminPassword: </span> !@#$mahfuj</p>
+          </div>
+          <div className='employee__access'>
+            <p><span>EmployeeUsername: </span> Mahfujur_Rahman</p>
+            <p><span>EmployeePassword: </span> !@#$mahfuj</p>
+          </div>
+        </div>
       </main>
       <footer>
-        <Link to="/">Back to Home</Link>
+        <Link to="/">Back to Home <FontAwesomeIcon icon={faHome} /></Link>
       </footer>
     </section>
   )

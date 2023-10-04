@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom'
+import {
+    faRightFromBracket
+} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Public = () => {
     const content = (
@@ -18,7 +22,7 @@ const Public = () => {
                 <p>Owner: Dan Davidson</p>
             </main>
             <footer>
-                <Link to="/login">Employee Login</Link>
+                <Link to="/login">Employee Login <FontAwesomeIcon icon={faRightFromBracket} /></Link>
             </footer>
         </section>
 

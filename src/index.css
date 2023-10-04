@@ -118,6 +118,27 @@ a:focus-visible {
   flex-grow: 1;
 }
 
+.access {
+  display: flex;
+  gap: 75px;
+  margin-top: 55px;
+  font-size: 22px;
+}
+
+.access span {
+  font-weight: 700;
+  color: bisque;
+  font-size: 17px;
+}
+
+.loading__message {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+}
+
 .public__main,
 .login {
   flex-grow: 1;
@@ -342,6 +363,11 @@ tr {
   .icon-button {
     font-size: 1.5rem;
   }
+
+    .access {
+      flex-direction: column;
+      gap: 20px;
+    }
 }
 
 
